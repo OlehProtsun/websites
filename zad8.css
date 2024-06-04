@@ -1,0 +1,141 @@
+
+body {
+    background-color: darkgray;
+    margin: 0; 
+}
+
+.container {
+    margin: 10px auto;
+    max-width: 900px;      
+    box-sizing: border-box; 
+    height: auto; 
+    background-color: blueviolet;
+}
+
+#photobg {
+    background-color: rgb(1, 120, 224);
+    background-attachment: fixed;
+    background-image: url('https://picsum.photos/200/150');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#photobg2 {
+    background-color: white;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    align-items: center;
+}
+
+#photobg3 {
+    background-color: gray;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#spanFooter2,
+#spanFooter3,
+#spanFooter4,
+#spanFooter5 {
+    margin: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+#divFooter2,#divFooter1 {
+    margin: 20px; 
+}
+
+#divFooter2 a {
+    text-decoration: none;
+}
+
+#links {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+     
+}
+
+#links a {
+    margin: 10px;
+    padding: 18px;
+    background-color: brown;
+    border-radius: 20%;
+    text-decoration: none;
+    color: white;
+}
+
+.box {
+    width: calc(33.33% - 20px); 
+    height: 150px;
+    background-image: url('https://picsum.photos/200/150');
+    display: inline-block;
+    background-size: cover;
+    position: relative;
+    margin: 10px;
+    transition: transform 0.3s ease; 
+}
+
+.box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.1);
+}
+
+.box:hover::before {
+    opacity: 1;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    
+
+    .container {
+        padding: 0 5px; 
+    }
+
+    #photobg {
+        height: 300px; /
+    }
+
+    #photobg2 {
+        height: auto; 
+        flex-direction: column; 
+    }
+
+    #links {
+        margin-top: 10px; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .box {
+        width: calc(100% - 20px); 
+    }
+}
